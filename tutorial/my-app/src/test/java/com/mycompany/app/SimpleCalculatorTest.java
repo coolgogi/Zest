@@ -12,7 +12,7 @@ public class SimpleCalculatorTest {
 
 		SimpleCalculatorProperties p = new SimpleCalculatorProperties() ;
 		// generator
-		p.additionTest(int.class, int.class) ;
+		p.additionTest(1, 2) ;
 		
 	}
 

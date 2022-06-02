@@ -1,16 +1,25 @@
 import com.pholser.junit.quickcheck.Property;
 import com.pholser.junit.quickcheck.runner.JUnitQuickcheck;
 import org.junit.runner.RunWith;
-import org.junit.Test;
+import org.junit.Test ;
 
 import static org.junit.Assert.*;
+import static org.junit.Assume.assumeThat;
+import static org.junit.experimental.results.PrintableResult.testResult;
+import static org.junit.experimental.results.ResultMatchers.isSuccessful;
 
-public class StringPropertiesTest {
-	@Test public void concatenationLengthTest() {
-		StringProperties sp = new StringProperties() ;
-		String s1 = "hello" ;
-		String s2 = "world" ;
-		sp.concatenationLength(s1, s2) ;
+public class StringPropertiesTest{
+	@RunWith(JUnitQuickcheck.class)
+	public class StringProperties {
+		@Property public void concatenationLength(String s1, String s2) {
+			System.out.println(s1) ;
+			System.out.println(s2) ;
+			assertEquals(s1.length() + s2.length(), (s1 + s2).length());
+		}
 	}
 
+	@Test public void propertyTest() {
+		StringProperties sp = new StringProperties() ;
+		sp.concatenationLength("hello", "world") ;
+	}
 }

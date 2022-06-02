@@ -22,7 +22,6 @@ public class CalculatorWithQcTest {
     CalculatorWithQc calculator = new CalculatorWithQc() ;
    	
     Gen<Integer> i_generator = Gen.oneOf(1, 2, 3, 4, 5) ;
-    i_generator.generate(random, status) ;
 
     String input = "" ;
     int ans = 0 ;
@@ -37,6 +36,7 @@ public class CalculatorWithQcTest {
     ans = ans + tp ;
     input = input + String.valueOf(tp) ;
 
+    System.out.println(input) ;
     int sum = calculator.evaluate(input) ;
     
     assertEquals(ans, sum) ;
