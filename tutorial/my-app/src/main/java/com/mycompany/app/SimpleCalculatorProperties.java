@@ -16,21 +16,3 @@ class SimpleCalculator {
         }
 }
 
-@RunWith(JUnitQuickcheck.class)
-public class SimpleCalculatorProperties {
-        @Property public void additionTest(int a, int b) {
-                SimpleCalculator calculator = new SimpleCalculator() ;
-                int c = calculator.addition(a, b) ;
-                int d = a + b ;
-		System.err.println(a) ;
-		System.err.println(b) ;
-                assertEquals(c, d) ;
-        }
-        @Property public void multiplicationTest(int a, int b) {
-                SimpleCalculator calculator = new SimpleCalculator() ;
-                int c = calculator.multiplication(a, b) ;
-                int d = a * b ;
-                assertEquals(c, d) ;
-        }
-}
-
