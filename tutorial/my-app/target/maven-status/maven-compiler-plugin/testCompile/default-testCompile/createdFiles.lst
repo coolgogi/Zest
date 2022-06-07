@@ -1,6 +1,6 @@
+DimensionPropertiesTest.class
+InputGeneratorTest.class
 StringPropertiesTest.class
+SimpleCalculatorPropertiesTest.class
 CalculatorTest.class
 CalculatorWithQcTest.class
-com/mycompany/app/AppTest.class
-SimpleCalculatorProperties.class
-DimensionProperties.class

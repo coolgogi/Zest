@@ -1,7 +1,5 @@
 Calculator.class
-StringProperties.class
-CalculatorWithQc.class
-com/mycompany/app/App.class
+InputGenerator.class
 SimpleCalculator.class
 Dimensions.class
-SimpleCalculatorProperties.class
+CalculatorWithQc.class
