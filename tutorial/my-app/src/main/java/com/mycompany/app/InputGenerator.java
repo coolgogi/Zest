@@ -23,4 +23,23 @@ public class InputGenerator extends Generator<String> {
 
 		return rt ;
         }
+	
+	public void compare (int[] arr, int a, int b) {
+		if (arr[a] > arr[b]) {
+			swap(arr, a, b) ;
+			return ;
+		}
+		else {
+			return ;
+		}
+
+	}
+
+	public void swap (int[] arr, int a, int b) {
+		int tp = arr[a] ;
+		arr[a] = arr[b] ;
+		arr[b] = tp ;
+		return ;
+	}
+
 }

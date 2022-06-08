@@ -30,5 +30,4 @@ public class InputGeneratorTest {
 		System.out.println(str) ;
 		assertEquals(str.length(), str.length()) ;
 	}
-
 }
