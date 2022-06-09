@@ -1,6 +1,9 @@
 DimensionPropertiesTest.class
-InputGeneratorTest.class
 StringPropertiesTest.class
-SimpleCalculatorPropertiesTest.class
 CalculatorTest.class
+SimpleCalculatorSeedTest.class
+SimpleCalculatorShrinkTest.class
+InputGeneratorTest.class
+SimpleCalculatorExhaustiveTest.class
+SimpleCalculatorPropertiesTest.class
 CalculatorWithQcTest.class

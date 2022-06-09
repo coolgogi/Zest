@@ -9,7 +9,7 @@ import static org.junit.Assert.* ;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(JUnitQuickcheck.class)
-public class SimpleCalculatorPropertiesTest {
+public class SimpleCalculatorShrinkTest {
 
 	private SimpleCalculator calculator ;
 
@@ -18,10 +18,17 @@ public class SimpleCalculatorPropertiesTest {
 		calculator = new SimpleCalculator() ;
 	}
 
-        @Property(trials = 5)
-	public void additionTest (int a, int b) {
-		String str = "" + a + "," + b ;
-		System.out.println(str) ;
-                assertEquals(a+b, calculator.addition(a, b)) ;
-        }
+	@Property(shrink = true) // default false
+	public void ShirnkTest (int a) {
+		int b = a ;
+/*
+		if (a % 2 == 1) {
+			b = a - 1 ;
+		}
+*/
+		System.out.println(a) ;
+		assertEquals(a, b) ;
+	}
+
+
 }

@@ -9,7 +9,7 @@ import static org.junit.Assert.* ;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(JUnitQuickcheck.class)
-public class SimpleCalculatorPropertiesTest {
+public class SimpleCalculatorExhaustiveTest {
 
 	private SimpleCalculator calculator ;
 
@@ -18,8 +18,9 @@ public class SimpleCalculatorPropertiesTest {
 		calculator = new SimpleCalculator() ;
 	}
 
-        @Property(trials = 5)
-	public void additionTest (int a, int b) {
+        @Property(trials = 3, mode = EXHAUSTIVE)
+	public void additionTestMode (int a, int b) {
+		System.out.println("mode") ;
 		String str = "" + a + "," + b ;
 		System.out.println(str) ;
                 assertEquals(a+b, calculator.addition(a, b)) ;

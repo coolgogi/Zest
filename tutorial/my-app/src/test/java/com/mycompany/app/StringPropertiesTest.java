@@ -10,6 +10,8 @@ public class StringPropertiesTest {
 
 	@Property(trials = 5) //default 100
        	public void ConcatenationLength (String s1, String s2) {
+		System.out.println(s1) ;
+		System.out.println(s2) ;
 		assertEquals(s1.length() + s2.length(), (s1 + s2).length());
 	}
 	

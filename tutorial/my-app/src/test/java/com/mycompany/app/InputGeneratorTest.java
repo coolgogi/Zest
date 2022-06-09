@@ -3,14 +3,15 @@ import com.pholser.junit.quickcheck.random.SourceOfRandomness ;
 import com.pholser.junit.quickcheck.generator.GenerationStatus ;
 import com.pholser.junit.quickcheck.internal.generator.SimpleGenerationStatus ;
 
+import static com.pholser.junit.quickcheck.Mode.EXHAUSTIVE ;
 import com.pholser.junit.quickcheck.Property ;
 import com.pholser.junit.quickcheck.From ;
+
 import com.pholser.junit.quickcheck.runner.JUnitQuickcheck ;
 import org.junit.runner.RunWith ;
 import java.util.Random ;
 import static org.junit.Assert.* ;
 import org.junit.Before ;
-
 
 @RunWith(JUnitQuickcheck.class)
 public class InputGeneratorTest {
@@ -26,8 +27,10 @@ public class InputGeneratorTest {
 	}
 
 	@Property(trials = 5) 
-	public void DimensionProperties (@From(InputGenerator.class) String str) {
+	public void InputGeneratorProperties (@From(InputGenerator.class) String str) {
+		System.out.println("Properties") ;
 		System.out.println(str) ;
 		assertEquals(str.length(), str.length()) ;
 	}
+
 }

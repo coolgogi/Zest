@@ -9,7 +9,7 @@ import static org.junit.Assert.* ;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(JUnitQuickcheck.class)
-public class SimpleCalculatorPropertiesTest {
+public class SimpleCalculatorSeedTest {
 
 	private SimpleCalculator calculator ;
 
@@ -18,10 +18,10 @@ public class SimpleCalculatorPropertiesTest {
 		calculator = new SimpleCalculator() ;
 	}
 
-        @Property(trials = 5)
-	public void additionTest (int a, int b) {
+	@Property // default seed 0L
+	public void SeedTest (@When(seed = -1L) int a, int b) {
 		String str = "" + a + "," + b ;
 		System.out.println(str) ;
-                assertEquals(a+b, calculator.addition(a, b)) ;
-        }
+		assertEquals(a+b, calculator.addition(a, b)) ;
+	}
 }
