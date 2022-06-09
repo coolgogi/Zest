@@ -2,6 +2,7 @@ DimensionPropertiesTest.class
 StringPropertiesTest.class
 CalculatorTest.class
 SimpleCalculatorSeedTest.class
+StringProperties.class
 SimpleCalculatorShrinkTest.class
 InputGeneratorTest.class
 SimpleCalculatorExhaustiveTest.class

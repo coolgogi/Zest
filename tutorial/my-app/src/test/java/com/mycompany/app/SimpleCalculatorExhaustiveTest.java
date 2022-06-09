@@ -20,7 +20,6 @@ public class SimpleCalculatorExhaustiveTest {
 
         @Property(trials = 3, mode = EXHAUSTIVE)
 	public void additionTestMode (int a, int b) {
-		System.out.println("mode") ;
 		String str = "" + a + "," + b ;
 		System.out.println(str) ;
                 assertEquals(a+b, calculator.addition(a, b)) ;

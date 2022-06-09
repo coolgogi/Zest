@@ -6,7 +6,7 @@ import com.pholser.junit.quickcheck.generator.NullAllowed ;
 import static org.junit.Assert.*;
 
 @RunWith(JUnitQuickcheck.class)
-public class StringPropertiesTest {
+public class StringProperties {
 
 	@Property(trials = 5) //default 100
        	public void ConcatenationLength (String s1, String s2) {

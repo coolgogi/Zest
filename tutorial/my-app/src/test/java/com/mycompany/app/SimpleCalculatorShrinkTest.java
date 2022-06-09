@@ -10,14 +10,6 @@ import static org.junit.Assert.assertEquals;
 
 @RunWith(JUnitQuickcheck.class)
 public class SimpleCalculatorShrinkTest {
-
-	private SimpleCalculator calculator ;
-
-	@Before
-	public void init () {
-		calculator = new SimpleCalculator() ;
-	}
-
 	@Property(shrink = true) // default false
 	public void ShirnkTest (int a) {
 		int b = a ;
@@ -29,6 +21,4 @@ public class SimpleCalculatorShrinkTest {
 		System.out.println(a) ;
 		assertEquals(a, b) ;
 	}
-
-
 }

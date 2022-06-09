@@ -1,0 +1,15 @@
+-------------------------------------------------------------------------------
+Test set: SimpleCalculatorShrinkTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.019 s <<< FAILURE! - in SimpleCalculatorShrinkTest
+ShirnkTest(SimpleCalculatorShrinkTest)  Time elapsed: 0.019 s  <<< FAILURE!
+java.lang.AssertionError: 
+Property named 'ShirnkTest' failed (expected:<121005> but was:<121004>):
+With arguments: [121005]
+Original failure message: expected:<65030605> but was:<65030604>
+First arguments found to also provoke a failure: [65030605]
+Seeds for reproduction: [-5231638246740079749]
+	at SimpleCalculatorShrinkTest.ShirnkTest(SimpleCalculatorShrinkTest.java:30)
+Caused by: java.lang.AssertionError: expected:<65030605> but was:<65030604>
+	at SimpleCalculatorShrinkTest.ShirnkTest(SimpleCalculatorShrinkTest.java:30)
+
