@@ -8,7 +8,7 @@ import static org.junit.Assert.*;
 @RunWith(JUnitQuickcheck.class)
 public class StringPropertiesTest {
 
-	@Property(trials = 5) //default 100
+	@Property
        	public void ConcatenationLength (String s1, String s2) {
 		String str = s1 + "," + s2 ;
 		System.out.println(str) ;
